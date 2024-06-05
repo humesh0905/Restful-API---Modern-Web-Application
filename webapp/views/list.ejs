@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Student Records</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/upload">Create</a></li>
+                <li><a href="/list">Read</a></li>
+                <li><a href="/query">Query</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 style="text-align:center; color: rgb(128, 42, 42);">Student Records</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>University Name</th>
+                    <th>Date of Birth</th>
+                    <th>Level of Education</th>
+                    <th>Joining Year</th>
+                    <th>Job Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(function(student) { %>
+                    <tr>
+                        <td><%= student.firstName %> <%= student.lastName %></td>
+                        <td><%= student.email %></td>
+                        <td><%= student.universityName %></td>
+                        <td><%= student.dateOfBirth ? new Date(student.dateOfBirth).toDateString() : 'Not provided' %></td>
+                        <td><%= student.levelOfEducation %></td>
+                        <td><%= student.joiningYear %></td>
+                        <td><%= student.jobTitle %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

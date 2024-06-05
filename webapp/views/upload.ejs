@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Student Record</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/upload">Create</a></li>
+                <li><a href="/list">Read</a></li>
+                <li><a href="/query">Query</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 style="text-align:center; color: rgb(128, 42, 42);">Enter the student record</h1>
+        <form action="/upload" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="universityName">University Name:</label>
+            <input type="text" id="universityName" name="universityName" required>
+
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+            <label for="levelOfEducation">Level of Education:</label>
+            <select id="levelOfEducation" name="levelOfEducation" required>
+                <option value="Bachelor">Bachelor</option>
+                <option value="Masters">Masters</option>
+                <option value="Postdoctoral">Postdoctoral</option>
+            </select>
+
+            <label for="joiningYear">Joining Year:</label>
+            <input type="number" id="joiningYear" name="joiningYear" required>
+
+            <label for="jobTitle">Job Title:</label>
+            <select id="jobTitle" name="jobTitle" required>
+                <option value="GA">GA</option>
+                <option value="TA">TA</option>
+                <option value="RA">RA</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
